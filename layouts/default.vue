@@ -1,11 +1,17 @@
 <template lang="pug">
-  v-app(dark)
-    main
-      nuxt
+  v-app(light dark)
+    v-container-fluid.container
+      main
+        nuxt
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.container{
+  display: flex;
+}
 main{
-  border: 1px solid green;
+  //float: right;
+  width: 94%;
+  margin: 0 3%;
 }
 </style>
