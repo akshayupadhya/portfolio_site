@@ -10,21 +10,23 @@
     ul
       li(v-for="item in stuff")
         mbutton(v-bind:item="item")
-
 </template>
 
 <style lang="scss" >
 .app{
-  max-height: 95vh;
-  margin-top: 25%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center!important;
   .main-box{
     display: flex;
     flex-direction: row;
+    border: 1px solid wheat;
       .image{
         margin-top: 2%;
         width: 40%;
        img{
-          border: 1px solid white;
           border-radius: 50%;
           width: 100%;
         }
@@ -50,11 +52,12 @@
   }
 
 ul{
-  //float: left;
+  border: 1px solid wheat;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  width: 100%;
     li{
       margin: 2% 5% ;
       list-style: none;     
