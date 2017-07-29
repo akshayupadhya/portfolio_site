@@ -43,8 +43,7 @@
             padding:2% 5%;
             margin: 0 3%;
             h6{
-              color: whitesmoke;
-              box-shadow: 3px 3px 1px 0 #fff
+              color: whitesmoke
             }
           }
 
