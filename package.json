@@ -14,6 +14,7 @@
     "aframe": "^0.6.1",
     "nuxt": "0.10.7",
     "vue-server-renderer": "latest",
+    "vue-typer": "^1.0.4",
     "vuetify": "^0.13.0"
   },
   "devDependencies": {

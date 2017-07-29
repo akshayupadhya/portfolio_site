@@ -5,8 +5,8 @@
         img(src="/images/image.jpg")
       .text
         h2.name Akshay Upadhya
-        .caption
-            h6 full Stack JavaScript developer
+        mcaption
+            
     ul
       li(v-for="item in stuff")
         mbutton(v-bind:item="item")
@@ -18,11 +18,10 @@
   display: flex;
   flex-direction: column;
   justify-content:center;
-  align-items: center!important;
+  align-items: center;
   .main-box{
     display: flex;
     flex-direction: row;
-    //border: 1px solid wheat;
       .image{
         margin-top: 2%;
         width: 40%;
@@ -39,13 +38,7 @@
           color: whitesmoke;
           margin: 0 3%;
         }
-          .caption{
-            padding:2% 5%;
-            margin: 0 3%;
-            h6{
-              color: whitesmoke
-            }
-          }
+          
 
       }
     }
@@ -67,6 +60,7 @@ ul{
 
   <script>
   import mbutton from '../components/mbutton.vue'
+  import mcaption from '../components/caption.vue'
   export default {
     data(){
       return{
@@ -78,7 +72,8 @@ ul{
           ]
       }
     },components:{
-      "mbutton":mbutton
+      "mbutton":mbutton,
+      "mcaption":mcaption
     }
   }
   </script>

@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-app(light dark)
+  v-app( dark)
     v-container-fluid.container
       main
         nuxt
