@@ -22,7 +22,7 @@
   .main-box{
     display: flex;
     flex-direction: row;
-    border: 1px solid wheat;
+    //border: 1px solid wheat;
       .image{
         margin-top: 2%;
         width: 40%;
@@ -44,6 +44,7 @@
             margin: 0 3%;
             h6{
               color: whitesmoke;
+              box-shadow: 3px 3px 1px 0 #fff
             }
           }
 
@@ -52,7 +53,7 @@
   }
 
 ul{
-  border: 1px solid wheat;
+  //border: 1px solid wheat;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
