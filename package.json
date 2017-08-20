@@ -8,6 +8,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "gen":"npm run build && npm run generate && git add . ; timestamp=$(date \"+%s\") && git commit -m \"automated deployment $timestamp\";  git push origin master",
     "deploy": "push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
