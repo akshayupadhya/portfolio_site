@@ -3,19 +3,21 @@
     .dummy {{ computeMessage }}
     .box(v-for="(flag,$index) in rotateFlag")
         transition(name="fade" v-if="flag")
-          h6() {{ captions[$index] }}
+          h6() {{ captions($index) }}
 </template>
 
 <script>
 export default {
   data(){
       return{
-        captions:["Full Stack JavaScript developer","Electronics And Communication Engineer","Passionate web developer",
-        "Bangalorean 😎"],
+
         message:"full Stack JavaScript developer",
-        rotateFlag:[true,false,false,false]
+        rotateFlag:[1,0,0,0]
       }
-  },computed:{
+  },methods:{
+    captions(i) { return this.$store.state.comp.captions[i]  },
+  },
+  computed:{
       computeMessage(){
 
           this.intervalid1 = setInterval(()=>{

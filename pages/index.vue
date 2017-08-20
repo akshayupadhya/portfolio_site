@@ -8,7 +8,7 @@
         mcaption
             
     ul
-      li(v-for="item in stuff")
+      li(v-for="item in $store.state.comp.linklist")
         mbutton(v-bind:item="item")
 </template>
 
@@ -62,18 +62,9 @@ ul{
   import mbutton from '../components/mbutton.vue'
   import mcaption from '../components/caption.vue'
   export default {
-    data(){
-      return{
-          stuff:[
-            {name:"linkedin",link:"https://www.linkedin.com/in/akshay-upadhya-68548156/"},
-            {name:"github",link:"https://github.com/akshayupadhya"},
-            {name:"twitter",link:"https://twitter.com/AKSHAYUPADHYA"},
-            {name:"instagram",link:"https://www.instagram.com/akshayupadhya/"},
-          ]
-      }
-    },components:{
-      "mbutton":mbutton,
-      "mcaption":mcaption
+   components:{
+      mbutton,
+      mcaption
     }
   }
   </script>
