@@ -8,7 +8,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "gen": "npm run build && npm run generate && git add . ; timestamp=$(date \"+%s\") && git commit -m \"automated deployment $timestamp\";  git push files master",
+    "gen": "git add . ; timestamp=$(date \"+%s\") && git commit -m \"automated deployment $timestamp\";  git push files master",
     "deploy": " npm run gen && push-dir --dir=dist --branch=master --cleanup"
   },
   "dependencies": {
