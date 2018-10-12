@@ -1,0 +1,29 @@
+{
+  "name": "portfolio_site",
+  "version": "2.0.0",
+  "description": "portfolio webiste",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akshayupadhya/portfolio_site.git"
+  },
+  "keywords": [
+    "akshayupadhya",
+    "akshay",
+    "upadhya"
+  ],
+  "author": "akshay upadhya <akshaysrinagar@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akshayupadhya/portfolio_site/issues"
+  },
+  "homepage": "https://github.com/akshayupadhya/portfolio_site#readme",
+  "dependencies": {
+    "next": "^7.0.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
