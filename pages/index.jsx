@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import OneScroll from '../components/OneScroll'
-require('../styles.css')
+// require('../styles.css')
+import  "../scss/style.scss";
 export default class Home extends Component {
   render () {
     return (
