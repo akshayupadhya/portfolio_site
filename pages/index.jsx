@@ -1,14 +1,15 @@
 import { Component } from 'react'
-import OneScroll from '../components/OneScroll'
-// require('../styles.css')
-import  "../scss/style.scss";
+import { OneScroll } from '../components/OneScroll'
+import {FirstScrollHome} from '../components/firstScrollHome'
+import '../scss/style.scss'
 export default class Home extends Component {
   render () {
     return (
       <div>
-        <OneScroll className="first">
+        {/* <OneScroll className="first">
           name ,intro,resume,gitHub and twitter Links
-        </OneScroll> 
+        </OneScroll>  */}
+        <FirstScrollHome/>
         <OneScroll>
           projects
         </OneScroll> 

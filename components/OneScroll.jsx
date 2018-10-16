@@ -1,15 +1,10 @@
-import {Component} from 'react'
-import './oneScroll.scss'
-export default class OneScroll extends Component {
-	constructor(props){
-		super(props)
-	}
-	render(){
-		const className = this.props.className
-		return (
-			<div className={`OneScroll ${className ? className : ""}`} >
-				{this.props.children}
-			</div>
-		)	
-	}
-	}
+// import React from 'react'
+import "../scss/components/oneScroll.scss";
+export const OneScroll = props => {
+  const className = props.className;
+  return (
+    <div className={`OneScroll ${className ? className : ""}`}>
+      {props.children}
+    </div>
+  );
+};
