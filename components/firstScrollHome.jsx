@@ -3,13 +3,13 @@ import "../scss/components/firstScrollHome.scss";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 import {
-  faTwitter,
-  faLinkedinIn,
-  faGithub
+  faGithub,faGithubSquare,
+  faTwitter,faTwitterSquare,
+  faLinkedinIn,faLinkedin
 } from "@fortawesome/fontawesome-free-brands";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-library.add(faEnvelope, faKey, faTwitter, faGithub, faLinkedinIn);
+library.add(faEnvelope, faKey, faTwitter, faGithub, faLinkedinIn,faTwitterSquare,faLinkedin,faGithubSquare);
 export const FirstScrollHome = () => (
   <OneScroll className="firstScroll">
     <div className="intro">
@@ -19,9 +19,9 @@ export const FirstScrollHome = () => (
       <p className="place">Bangalore</p>
     </div>
     <div className="social-media">
-      <FontAwesomeIcon icon={faGithub} color="#6DB65B" size="5x" />
-      <FontAwesomeIcon icon={faTwitter} color="#6DB65B" size="5x" />
-      <FontAwesomeIcon icon={faLinkedinIn} color="#6DB65B" size="5x" />
+      <FontAwesomeIcon icon={faGithubSquare} color="#6DB65B" size="5x" className='twitter' />
+      <FontAwesomeIcon icon={faTwitterSquare} className ='twitter' color="#6DB65B" size="5x" />
+      <FontAwesomeIcon icon={faLinkedin} color="#6DB65B" size="5x" className='twitter'/>
     </div>
   </OneScroll>
 );

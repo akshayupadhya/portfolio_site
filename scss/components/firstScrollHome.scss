@@ -2,12 +2,10 @@
 	background-image:linear-gradient(90deg, greenyellow,yellow);
 	color: beige;
 	display:flex;
-	// border: 4px sandybrown;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	.intro{
-		// border: 2px solid blanchedalmond;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -37,20 +35,8 @@
 	}
 	.social-media{
 		display: flex;
-		width: 40%;
-		height: 10%;
-		justify-content: space-between;
-		align-items: stretch;
-		.icon{
-			display: table-cell;
-			text-align: center;
-			vertical-align: middle;
-			min-width: 100px;
-			background-color: rgb(211, 223, 223);
-			color: greenyellow;
-		}
+		width: 100%;
+		justify-content: space-evenly;
+		align-items: center;
 	}
-	// div{
-	// 	border:1px solid goldenrod;
-	// }
 }

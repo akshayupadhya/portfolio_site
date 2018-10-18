@@ -1,0 +1,43 @@
+.SecondScroll{
+	// background: linear-gradient(270deg,blue,turquoise);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	.title{
+		width: 80%;
+		border: 3px solid whitesmoke;
+		height: 5%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.toggleBtn{
+			border: 2px solid;
+		}
+	}
+	.projects{
+		padding: 0 10%;
+		width:100%;
+		height:85%;
+		// border: 3px solid white;
+		display: grid;
+		grid-column-gap: 40px;
+		grid-row-gap: 40px;
+		.project{
+			border: 2px solid burlywood;
+			background-color: orangered;
+			box-shadow: 0px 0px 13px 5px rgba(224,224,224,0.75);
+		}
+	}
+	.oneThird{
+				grid-template-columns: repeat(3,1fr);
+	}
+	.oneFourth{
+				grid-template-columns: repeat(4,1fr);
+	}
+	.half{
+				grid-template-columns: repeat(2,1fr);
+	}
+	.fullWidth{
+				grid-template-rows: repeat(1fr,2);
+	}
+}
