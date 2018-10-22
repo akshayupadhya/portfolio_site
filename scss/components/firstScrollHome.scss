@@ -13,8 +13,12 @@
 		.circle{
 			height: 300px;
 			width: 300px;
-			border: 5px whitesmoke solid;
+			border: 5px sienna solid;
 			border-radius: 50%;
+			background-image: url(https://avatars0.githubusercontent.com/u/11410367?s=400&u=d6c3e64d74f74070a8a0a717a0497d4a177ca110&v=4);
+			background-position: center;
+			background-size: cover;
+			filter: grayscale(75%);
 		}
 		.name,.job,.place{
 			text-align: center;
