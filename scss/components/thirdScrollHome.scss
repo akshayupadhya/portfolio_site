@@ -9,9 +9,10 @@
 	}
 	code {
 		color: #03D609;
+		overflow-y: visible;
 		word-wrap: break-word;
 		pre{
-			overflow-y: hidden;
+			white-space: pre-wrap;
 		}
 	}
 }

@@ -1,39 +1,46 @@
-.firstScroll{
-	background-image:linear-gradient(90deg, greenyellow,yellow);
+.firstScroll {
+	background-image: linear-gradient(90deg, greenyellow, yellow);
 	color: beige;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	.intro{
+	.intro {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		.circle{
+		.circle {
 			height: 300px;
 			width: 300px;
 			border: 5px whitesmoke solid;
 			border-radius: 50%;
+			background-image: url('https://avatars0.githubusercontent.com/u/11410367?s=400&u=d6c3e64d74f74070a8a0a717a0497d4a177ca110&v=4');
+			background-position: center;
+			background-size: cover;
+			filter: grayscale(75%);
 		}
-		.name,.job,.place{
+		.name,
+		.job,
+		.place {
 			text-align: center;
+			color:whitesmoke;
 		}
-		.name{
+		.name {
 			font-weight: bolder;
 			font-size: 3em;
 		}
-		.job{
+		.job {
 			font-weight: bold;
 			font-size: 20px;
 		}
-		.place{
+		.place {
 			font-weight: 500;
 			font-size: 20px;
 			line-height: 20px;
 		}
 	}
-	.social-media{
+	.social-media {
 		display: flex;
 		width: 100%;
 		justify-content: space-evenly;
