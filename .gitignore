@@ -4,6 +4,9 @@ node_modules/
 #next folder
 .next/
 
+#dist folder
+out/
+
 #lock files
 package-lock.json
 yarn.lock
