@@ -7,8 +7,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "generate": "next export",
     "gen": "git add . ; timestamp=$(date \"+%s\") && git commit -m \"automated deployment $timestamp\";  git push files master",
-    "deploy": " npm run gen && push-dir --dir=dist --branch=master --cleanup"
+    "deploy": "npm run generate && npm run gen && push-dir --dir=dist --branch=master --cleanup"
   },
   "repository": {
     "type": "git",
