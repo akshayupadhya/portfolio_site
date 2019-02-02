@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "gen": "git add . ; timestamp=$(date \"+%s\") && git commit -m \"automated deployment $timestamp\";  git push files master",
+    "deploy": " npm run gen && push-dir --dir=dist --branch=master --cleanup"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
-    "node-sass": "^4.9.3"
+    "node-sass": "^4.9.3",
+    "push-dir": "^0.4.1"
   }
 }
