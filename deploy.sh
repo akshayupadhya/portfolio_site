@@ -1,6 +1,6 @@
 npm run build
 npm run generate
-cp -r  out dist
+cp -r  out/ dist
 mv dist/ ../
 git checkout master
 rm -rf ./* 
