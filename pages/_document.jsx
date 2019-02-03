@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import Manifest from "next-manifest/manifest";
+import { OneScroll } from "../components/OneScroll";
 export default class MyDocument extends Document {
   render() {
     return (
@@ -7,6 +8,7 @@ export default class MyDocument extends Document {
         <Head>
           <title>Akshay Upadhya</title>
           <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
@@ -22,7 +24,9 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
         <body>
-          <Main />
+          <OneScroll>
+            <Main />
+          </OneScroll>
           <NextScript />
         </body>
       </html>
