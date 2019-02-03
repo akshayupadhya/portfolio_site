@@ -5,7 +5,7 @@ mv dist/ ../
 git checkout master
 rm -rf ./* 
 mv ../dist/* ./
-timestamp=$(date \"+%s\") 
-git commit -m \"automated deployment $timestamp\";
+git add . 
+git commit -am \"automated deployment \"
 git push files master
 git checkout 2019
