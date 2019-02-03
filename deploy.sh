@@ -1,3 +1,4 @@
+npm run build
 npm run generate
 cp -r  out dist
 mv dist/ ../
