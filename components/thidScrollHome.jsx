@@ -18,7 +18,7 @@ export const ThirdScrollHome = () => {
       education: "B.E, Electronics And Communication, 2013-17",
       others: [
         "Tabs over Spaces",
-        "Been in bangalore all my life",
+        "Bengalooru namma ooru",
         "Filter coffee over Chai"
       ]
     }
