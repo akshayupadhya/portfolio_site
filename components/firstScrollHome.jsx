@@ -35,7 +35,6 @@ const socialIcons = [
     url: "https://www.linkedin.com/in/akshay-upadhya-68548156/"
   }
 ];
-const socialIconColor = "#fff";
 export const FirstScrollHome = () => (
   <OneScroll className="firstScroll">
     <div className="intro">
@@ -48,8 +47,8 @@ export const FirstScrollHome = () => (
       <p className="place">Bangalore</p>
     </div>
     <div className="social-media">
-      {socialIcons.map(({ icon, url }) => (
-        <IconBtn icon={icon} url={url} color={`${socialIconColor}`} />
+      {socialIcons.map(({ icon, url }, index) => (
+        <IconBtn key={index} icon={icon} url={url} />
       ))}
     </div>
   </OneScroll>
