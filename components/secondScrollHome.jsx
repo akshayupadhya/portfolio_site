@@ -1,5 +1,4 @@
-import { Component } from "react";
-import { OneScroll } from "./OneScroll";
+import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faGripHorizontal,
@@ -8,42 +7,31 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../scss/components/secondScrollHome.scss";
 library.add(faGripHorizontal, faGripVertical);
-export class SecondScrollHome extends Component {
-  constructor() {
-    super();
-    this.state = {
-      counter: 0
-    };
-  }
-  classNames = ["oneThird", "oneFourth", "half", "fullWidth"];
+export const SecondScrollHome = () => {
+  const [counter, updateCounter] = useState(0);
+  const classNames = ["oneThird", "oneFourth", "half", "fullWidth"];
 
-  classToggle = () => {
-    const currentState = (this.state.counter + 1) % this.classNames.length;
-    this.setState({
-      counter: currentState
-    });
+  const classToggle = () => {
+    const currentState = (counter + 1) % classNames.length;
+    updateCounter(currentState);
   };
-  render() {
-    return (
-      <OneScroll className="SecondScroll">
-        <div className="title">
-          <div>Projects</div>
-          <FontAwesomeIcon
-            icon={
-              this.state.counter % 2 === 0 ? faGripHorizontal : faGripVertical
-            }
-            onClick={this.classToggle}
-            size="2x"
-          />
-        </div>
-        <div className={`projects ${this.classNames[this.state.counter]}`}>
-          {[...Array(8).keys()].map(i => (
-            <div className="project" key={i}>
-              {i}
-            </div>
-          ))}
-        </div>
-      </OneScroll>
-    );
-  }
-}
+  return (
+    <div className="projects">
+      <div className="title">
+        <div>Projects</div>
+        <FontAwesomeIcon
+          icon={counter % 2 === 0 ? faGripHorizontal : faGripVertical}
+          onClick={classToggle}
+          size="2x"
+        />
+      </div>
+      <div className={`projects ${classNames[counter]}`}>
+        {[...Array(8).keys()].map(i => (
+          <div className="project" key={i}>
+            {i}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
