@@ -1,13 +1,12 @@
-# dependencies
-node_modules
+#node modules
+node_modules/
 
-# logs
-npm-debug.log
+#next folder
+.next/
 
-# Nuxt build
-.nuxt
+#dist folder
+out/
 
-# Nuxt generate
-dist
-
-
+#lock files
+package-lock.json
+yarn.lock
