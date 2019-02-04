@@ -30,9 +30,9 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
       case "tapEnd": {
         if (tapStart > e.changedTouches[0].clientY)
           // scroll up
-          changeRoute("up");
+          changeRoute("down");
         // scroll down
-        else changeRoute("down");
+        else changeRoute("up");
         break;
       }
       case "mouse": {
