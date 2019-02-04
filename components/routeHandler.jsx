@@ -32,6 +32,7 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
           changeRoute("up");
         // scroll down
         else changeRoute("down");
+        break;
       }
       case "mouse": {
         if (tapStart === undefined) {
