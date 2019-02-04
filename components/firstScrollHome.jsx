@@ -1,5 +1,4 @@
 import "../scss/components/firstScrollHome.scss";
-import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faGithubSquare,

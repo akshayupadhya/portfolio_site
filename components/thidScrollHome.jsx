@@ -1,4 +1,3 @@
-import { OneScroll } from "./OneScroll";
 import "../scss/components/thirdScrollHome.scss";
 
 export const ThirdScrollHome = () => {
@@ -25,7 +24,7 @@ export const ThirdScrollHome = () => {
   };
   const TabChar = (match, offset, string) => (offset > 0 ? `\n->->` : "");
   return (
-    <OneScroll className="thirdScroll">
+    <div className="bio">
       <div className="title">About me</div>
       <code>
         <pre>
@@ -48,6 +47,6 @@ export const ThirdScrollHome = () => {
             .replace(/ /g, "·")}
         </pre>
       </code>
-    </OneScroll>
+    </div>
   );
 };
