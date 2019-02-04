@@ -1,18 +1,18 @@
-.thirdScroll {
-	background-color: #002F3A;
-	.title {
-		font-weight: bold;
-		font-size: 4rem;
-		display: block;
-		text-align: center;
-		color: palegoldenrod;
-	}
-	code {
-		color: #03D609;
-		overflow-y: visible;
-		word-wrap: break-word;
-		pre{
-			white-space: pre-wrap;
-		}
-	}
+.bio {
+  background-color: #002f3a;
+  .title {
+    font-weight: bold;
+    font-size: 4rem;
+    display: block;
+    text-align: center;
+    color: palegoldenrod;
+  }
+  code {
+    color: #03d609;
+    overflow-y: visible;
+    word-wrap: break-word;
+    pre {
+      white-space: pre-wrap;
+    }
+  }
 }
