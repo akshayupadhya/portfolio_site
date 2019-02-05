@@ -18,7 +18,6 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    console.info(this.props, `props`);
     return (
       <Container>
         <OneScroll>
