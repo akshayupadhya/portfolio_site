@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../scss/components/secondScrollHome.scss";
+import { gitContext } from "../pages/_document";
 library.add(faGripHorizontal, faGripVertical);
 export const SecondScrollHome = () => {
   const [counter, updateCounter] = useState(0);
@@ -24,11 +25,9 @@ export const SecondScrollHome = () => {
         />
       </div>
       <div className={`projects ${classNames[counter]}`}>
-        {[...Array(8).keys()].map(i => (
-          <div className="project" key={i}>
-            {i}
-          </div>
-        ))}
+        <gitContext.Consumer>
+          {context => <div>{context}</div>}
+        </gitContext.Consumer>
       </div>
     </div>
   );
