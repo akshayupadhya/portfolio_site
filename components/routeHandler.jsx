@@ -19,23 +19,20 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
       timer = true;
     }, 500);
   }, []);
-  const ScrollHandler = (type, e, element) => {
+  const ScrollHandler = (type, e) => {
     e.preventDefault();
     switch (type) {
-      case "tapStart": {
-        //coz i like brackets
+      case "tapStart":
         RecordTap(e.touches[0].clientY);
         break;
-      }
-      case "tapEnd": {
-        if (tapStart > e.changedTouches[0].clientY)
-          // scroll up
-          changeRoute("down");
-        // scroll down
-        else changeRoute("up");
+      case "tapEnd":
+        Math.abs(tapStart - e.changedTouches[0].clientY) >= 50 // if it is actually a swipe
+          ? tapStart > e.changedTouches[0].clientY
+            ? changeRoute("down") // scroll up
+            : changeRoute("up") // scroll down
+          : undefined;
         break;
-      }
-      case "mouse": {
+      case "mouse":
         if (tapStart === undefined && timer) {
           if (e.nativeEvent.deltaY <= 0) {
             /* scrolling up */
@@ -48,7 +45,6 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
           }
         }
         break;
-      }
     }
   };
   return (
@@ -56,7 +52,7 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
       className="route-handler"
       onTouchStart={e => ScrollHandler("tapStart", e)}
       onTouchEnd={e => ScrollHandler("tapEnd", e)}
-      onWheel={e => ScrollHandler("mouse", e, this)}>
+      onWheel={e => ScrollHandler("mouse", e)}>
       <Transition
         config={config.slow}
         from={{ opacity: 0 }}
