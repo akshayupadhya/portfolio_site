@@ -1,15 +1,17 @@
+import { withRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { Transition, config } from "react-spring";
 const routes = ["/", "/projects", "/bio"];
-export const RouteHandler = ({ currentRoute, children, url }) => {
+export const RouteHandler = withRouter(props => {
+  const { children, router } = props;
   const [tapStart, RecordTap] = useState(undefined);
-  const currentRouteIndex = routes.indexOf(currentRoute);
+  const currentRouteIndex = routes.indexOf(router.pathname);
   const changeRoute = type => {
-    let index = currentRouteIndex;
+    let index = routes.indexOf(router.pathname);
     if (type == "up") index -= 1;
     else index += 1;
     if (index >= 0 && index <= routes.length - 1) {
-      url.push(routes[index]);
+      router.push(routes[index]);
     }
   };
   let timer = false;
@@ -18,7 +20,7 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
     setTimeout(() => {
       timer = true;
     }, 500);
-  }, []);
+  });
   const ScrollHandler = (type, e) => {
     e.preventDefault();
     switch (type) {
@@ -52,16 +54,18 @@ export const RouteHandler = ({ currentRoute, children, url }) => {
       className="route-handler"
       onTouchStart={e => ScrollHandler("tapStart", e)}
       onTouchEnd={e => ScrollHandler("tapEnd", e)}
-      onWheel={e => ScrollHandler("mouse", e)}>
+      onWheel={e => ScrollHandler("mouse", e)}
+    >
       <Transition
         config={config.slow}
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}>
+        leave={{ opacity: 0 }}
+      >
         {style => props => (
           <div style={{ ...props, style, height: `100%` }}>{children}</div>
         )}
       </Transition>
     </div>
   );
-};
+});
