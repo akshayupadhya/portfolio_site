@@ -11,10 +11,8 @@ export const SecondScrollHome = () => {
   const [counter, updateCounter] = useState(0);
   const classNames = ["oneThird", "oneFourth", "half", "fullWidth"];
 
-  const classToggle = () => {
-    const currentState = (counter + 1) % classNames.length;
-    updateCounter(currentState);
-  };
+  const classToggle = () => updateCounter((counter + 1) % classNames.length);
+
   return (
     <div className="projects">
       <div className="title">

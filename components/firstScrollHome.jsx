@@ -39,6 +39,5 @@ export const FirstScrollHome = () => {
         ))}
       </div>
     </div>
-    // </OneScroll>
   );
 };
